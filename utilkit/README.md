@@ -1,9 +1,9 @@
-# UtilKit
+﻿# UtilKit
 
-A small, client-side Fabric utility mod for **Minecraft 1.21.8**, built to run inside
+A small, client-side Fabric utility mod for **Minecraft 1.21.11**, built to run inside
 **Lunar Client's Fabric add-on**.
 
-No injection, no launcher patching — Lunar loads third-party Fabric mods on 1.16.5+ through
+No injection, no launcher patching â€” Lunar loads third-party Fabric mods on 1.16.5+ through
 its Fabric add-on, and this is a normal Fabric mod.
 
 ## Features
@@ -18,10 +18,10 @@ its Fabric add-on, and this is a normal Fabric mod.
 
 ## Requirements
 
-- Minecraft **1.21.8** profile in the Lunar Client launcher
+- Minecraft **1.21.11** profile in the Lunar Client launcher
 - Lunar's **Fabric add-on** enabled for that profile (Lunar only loads external mods on 1.16.5+;
   this will not work on 1.8.9/1.12.2 profiles)
-- Fabric API — Lunar's add-on ships a bundle, but if the mod fails to appear, add the matching
+- Fabric API â€” Lunar's add-on ships a bundle, but if the mod fails to appear, add the matching
   `fabric-api` jar to the same mods folder
 
 ## Build
@@ -36,9 +36,9 @@ cd utilkit
 gradle build          # or ./gradlew build if you generate the wrapper
 ```
 
-The jar lands in `utilkit/build/libs/utilkit-1.0.0.jar`. Use the one **without** `-sources`.
+The jar lands in `utilkit/build/libs/utilkit-1.1.0.jar`. Use the one **without** `-sources`.
 
-The first build downloads roughly 400 MB (Minecraft 1.21.8, Yarn mappings, Fabric API), so give it
+The first build downloads roughly 400 MB (Minecraft 1.21.11, Yarn mappings, Fabric API), so give it
 a few minutes and a working internet connection.
 
 > Note: the DeepSeek Harness shell runs at low integrity, which makes every file report as
@@ -50,13 +50,13 @@ a few minutes and a working internet connection.
 
 Edit `gradle.properties` (`minecraft_version`, `yarn_mappings`, `fabric_version`, `loader_version`)
 and the `minecraft` range in `fabric.mod.json`. The code uses stable Fabric/vanilla APIs, but
-Yarn names shift between minor versions — expect to fix a few identifiers.
+Yarn names shift between minor versions â€” expect to fix a few identifiers.
 
 ## Install in Lunar Client
 
-1. Open the launcher, select (or create) a **1.21.8 Fabric** profile.
-2. Click the profile's ⚙ icon → **Mods** tab.
-3. Drag `utilkit-1.0.0.jar` into the window, confirm it is **Enabled**.
+1. Open the launcher, select (or create) a **1.21.11 Fabric** profile.
+2. Click the profile's âš™ icon â†’ **Mods** tab.
+3. Drag `utilkit-1.1.0.jar` into the window, confirm it is **Enabled**.
 4. Launch.
 
 Alternatively, click the folder icon in the Mods tab and copy the jar into that directory.
@@ -112,7 +112,7 @@ Server rules come first, and most networks ban **automation** even when the mod 
 allowed. So this mod does not implement:
 
 - autoclickers, auto-sprint, anti-AFK, or combat/aim assistance
-- timed input sequences (press key → click 20 times)
+- timed input sequences (press key â†’ click 20 times)
 - automatic inventory sorting, which requires simulating dozens of container clicks
 - anything that reads game state a normal client cannot see (entity radar, cave finder)
 

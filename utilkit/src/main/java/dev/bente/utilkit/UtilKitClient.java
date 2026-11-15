@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,10 @@ public class UtilKitClient implements ClientModInitializer {
 
     public static final String MOD_ID = "utilkit";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+    /** 1.21.9+ keys are grouped by a Category object rather than a free-form string. */
+    private static final KeyBinding.Category KEY_CATEGORY =
+            KeyBinding.Category.create(Identifier.of(MOD_ID, "main"));
 
     private static UtilKitConfig config;
     private static MacroManager macros;
@@ -27,7 +32,7 @@ public class UtilKitClient implements ClientModInitializer {
                 "key.utilkit.toggle_hud",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_F6,
-                "key.categories.utilkit"));
+                KEY_CATEGORY));
 
         HudOverlay.register(config);
         UtilKitCommands.register();

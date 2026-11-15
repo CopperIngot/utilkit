@@ -1,6 +1,6 @@
-# UtilKit
+﻿# UtilKit
 
-A client-side Fabric utility mod for Minecraft 1.21.8, designed to run inside **Lunar Client's
+A client-side Fabric utility mod for Minecraft 1.21.11, designed to run inside **Lunar Client's
 Fabric add-on**.
 
 HUD panel, configurable keybinds, chat/command macros, coordinate copying, quick drop.
@@ -29,4 +29,4 @@ cd utilkit
 gradle build
 ```
 
-The jar appears at `utilkit/build/libs/utilkit-1.0.0.jar` (take the one without `-sources`).
+The jar appears at `utilkit/build/libs/utilkit-1.1.0.jar` (take the one without `-sources`).
