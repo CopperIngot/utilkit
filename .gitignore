@@ -1,0 +1,10 @@
+# Build toolchain (JDK 21 + Gradle 8.14.3), staged locally — not part of the repo
+tools/
+
+# Build output
+build/
+.gradle/
+*.log
+
+# Local diagnostics
+_probe/
