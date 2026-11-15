@@ -25,13 +25,12 @@ public final class MacroManager {
         }
 
         boolean screenOpen = client.currentScreen != null;
-        long handle = client.getWindow().getHandle();
 
         for (UtilKitConfig.Macro macro : config.macros) {
             if (macro.keyCode < 0) {
                 continue;
             }
-            boolean down = !screenOpen && KeyState.isPressed(handle, macro.keyCode);
+            boolean down = !screenOpen && KeyState.isPressed(client.getWindow(), macro.keyCode);
             boolean wasDown = heldKeys.contains(macro.keyCode);
             if (down && !wasDown) {
                 execute(client, macro.action);
