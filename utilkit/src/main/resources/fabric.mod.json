@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "utilkit",
+  "version": "${version}",
+  "name": "UtilKit",
+  "description": "Client-side HUD, keybinds and chat macros for Minecraft. No gameplay automation.",
+  "authors": [
+    "bente"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.bente.utilkit.UtilKitClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "fabric-api": "*",
+    "minecraft": "~1.21.8",
+    "java": ">=21"
+  }
+}
